@@ -1,0 +1,41 @@
+.navbar-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    transition: background 0.5s cubic-bezier(.79, .14, .15, .86), padding 0.5s ease-in-out;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.light-color {
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+.nav-collaps {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.nav-collaps-scroll {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.dark-color {
+    background-color: var(--dark-bgackground-color)
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+@media screen and (max-width:990px) {
+    .navbar-container {
+        background-color: var(--dark-bgackground-color)
+    }
+}

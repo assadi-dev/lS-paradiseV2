@@ -1,0 +1,58 @@
+#presentation-section {
+    margin-top: 3rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+#rowPresentation {
+    display: flex;
+    justify-content: space-between;
+}
+
+#cardNews {
+    max-width: 50%;
+    flex: 0 0 50%;
+    box-shadow: 0px 0px 15px 2px #ea0e4b;
+    border: solid 1px #ea0e4b;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+#imgPresentation {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+#textPresentation {
+    max-width: 42%;
+    flex: 0 0 42%;
+    padding-left: 15px;
+    padding-right: 15px;
+
+
+
+}
+
+.text-format {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+#separatorPerso {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: rgba(0, 0, 0, 0.1);
+    height: 0;
+}
+
+
+#titlePresentation {
+    font-family: "AzonixRegular";
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    line-height: 1.2;
+}
