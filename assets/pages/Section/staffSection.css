@@ -2,7 +2,7 @@
     background-image: url("../../images/city.jpg");
     background-size: cover;
     padding-top: 3.5rem;
-
+    height: 100%;
     margin: 0;
 }
 
