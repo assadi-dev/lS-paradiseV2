@@ -1,26 +1,23 @@
 import React, { Component } from "react";
-import "./staff-card.css";
+import "./join-card.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
-export class StaffCard extends Component {
-  constructor(props) {
-    super(props);
-  }
+export class JoinCard extends Component {
   render() {
     const { title, description, link, text_button } = this.props;
     return (
-      <div className="row-card-staff">
-        <div className="icon-staff">
+      <div className="row-card-join">
+        <div className="icon-join">
           <FontAwesomeIcon className="success" icon={faCheckCircle} size="2x" />
         </div>
 
-        <div className="text-staff">
-          <h5 className="title-staff-feature">{title}</h5>
+        <div className="text-join">
+          <h5 className="title-join-feature">{title}</h5>
           <p>{description}</p>
 
           <a className="btn text-btn" href={link} target="_blank">
-            {text_button}
+            <span>{text_button}</span>
           </a>
         </div>
       </div>
@@ -28,4 +25,4 @@ export class StaffCard extends Component {
   }
 }
 
-export default StaffCard;
+export default JoinCard;

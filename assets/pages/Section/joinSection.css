@@ -6,8 +6,8 @@
 }
 
 #title-join {
-    margin-top: 3.5rem;
-    margin-bottom: 3.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     text-align: center;
     font-family: "AzonixRegular";
     font-size: 1.75rem;
@@ -16,6 +16,8 @@
 
 #row-join {
     display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
 
 }
 
@@ -26,6 +28,26 @@
     padding-left: 15px;
     padding-top: 1rem;
     align-items: center;
-    justify-content: center;
-    height: 100%;
+
+}
+
+
+
+@media (max-width:992px) {
+    #row-join {
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .col-join {
+        max-width: 80%;
+        align-self: center;
+    }
+}
+
+@media (max-width:760px) {
+    .col-join-picture {
+        max-width: 100%;
+    }
 }
