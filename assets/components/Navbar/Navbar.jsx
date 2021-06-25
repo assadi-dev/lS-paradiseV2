@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./navbar.css";
 import classNames from "classnames";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-regular-svg-icons";
 
 export class Navbar extends Component {
   state = {
@@ -31,7 +33,7 @@ export class Navbar extends Component {
 
   render() {
     return (
-      <div
+      <nav
         className={classNames(
           "navbar-container",
           "fixed-top",
@@ -39,8 +41,18 @@ export class Navbar extends Component {
           this.state.navbarScroll ? "nav-collaps-scroll" : "nav-collaps"
         )}
       >
-        <p>tedsst</p>
-      </div>
+        <div className="container">
+          <ul className="navbar-nav-left">
+            <li className="nav-item">Accueil</li>
+            <li className="nav-item">Nous rejoidre</li>
+            <li className="nav-item">Discord</li>
+            <li className="nav-item">Vote</li>
+          </ul>
+          <div className="navbar-right"> 
+            <span id="login-btn"> <i id="icone-login"><FontAwesomeIcon  icon={faUser}  /></i> Se connecter</span>
+          </div>
+        </div>
+      </nav>
     );
   }
 }
