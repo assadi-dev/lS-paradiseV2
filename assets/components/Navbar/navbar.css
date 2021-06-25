@@ -80,12 +80,14 @@
     font-weight: 300;
     font-size: 1rem;
     align-items: center;
+    cursor: pointer;
 }
 
 #icone-login {
     margin-right: 0.5rem;
     padding-right: 3px;
     padding-left: 3px;
+
 }
 
 .navbar-toggler-icon {
