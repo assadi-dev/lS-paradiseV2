@@ -49,6 +49,14 @@
     align-self: flex-start;
 }
 
+.nav-item a {
+    color: #fff;
+}
+
+.nav-item a:hover {
+    color: #9e9e9e;
+}
+
 .nav-item {
 
     cursor: pointer;

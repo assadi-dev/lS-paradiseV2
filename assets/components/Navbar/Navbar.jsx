@@ -3,7 +3,8 @@ import "./navbar.css";
 import classNames from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { HashLink} from 'react-router-hash-link';
+
 
 export class Navbar extends Component {
   state = {
@@ -47,8 +48,13 @@ export class Navbar extends Component {
         <span className="navbar-toggler-icon"> </span>
           <div className="navCont">
           <ul className="navbar-nav-left">
-            <li className="nav-item">Accueil</li>
-            <li className="nav-item">Nous rejoidre</li>
+              <li className="nav-item">
+                <HashLink smooth to="/#top"  >Accueil </HashLink>
+              </li>
+              <li className="nav-item">
+               
+                <HashLink smooth to="/#join-section"  > Nous rejoindre </HashLink>
+              </li>
             <li className="nav-item">Discord</li>
             <li className="nav-item">Vote</li>
           </ul>
