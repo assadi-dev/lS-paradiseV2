@@ -3,6 +3,7 @@ import "./navbar.css";
 import classNames from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export class Navbar extends Component {
   state = {
@@ -41,7 +42,10 @@ export class Navbar extends Component {
           this.state.navbarScroll ? "nav-collaps-scroll" : "nav-collaps"
         )}
       >
+        
         <div className="container">
+        <span className="navbar-toggler-icon"> </span>
+          <div className="navCont">
           <ul className="navbar-nav-left">
             <li className="nav-item">Accueil</li>
             <li className="nav-item">Nous rejoidre</li>
@@ -51,6 +55,8 @@ export class Navbar extends Component {
           <div className="navbar-right"> 
             <span id="login-btn"> <i id="icone-login"><FontAwesomeIcon  icon={faUser}  /></i> Se connecter</span>
           </div>
+          </div>
+          
         </div>
       </nav>
     );
