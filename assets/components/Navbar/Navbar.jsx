@@ -7,32 +7,53 @@ import { HashLink} from 'react-router-hash-link';
 
 
 export class Navbar extends Component {
-  state = {
+
+  
+
+
+ constructor () {
+   super()
+   this.state = {
     navbarScroll: false,
     dropdownMenu:false
-  };
+   };
+   
+   this.dropdownRef = React.createRef();
+
+   this.showMenu = this.showMenu.bind(this);
+   this.closeMenu = this.closeMenu.bind(this);
+ }
+ 
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
+  
 
-    document.querySelectorAll(".dropdown a").forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        e.preventDefault();
-       
-        this.setState({...this.state,dropdownMenu:!this.state.dropdownMenu})
-      })
-    })
 
   }
 
   componentWillUnmount() {
+  
     window.removeEventListener("scroll", this.handleScroll);
+   
   }
 
-  showMenu = (e) => {
-    e.peventDefault();
-    this.setState({...this.state,dropdownMenu:!this.state.dropdownMenu})
-   }
+  showMenu(event){
+    event.preventDefault();
+    this.setState({ ...this.state, dropdownMenu: !this.state.dropdownMenu }, () => {
+      document.addEventListener("click",this.closeMenu)
+    })
+  }
+  
+  closeMenu(event) {
+  
+    if (!event.target.matches(".dropdown-toogle")) {
+      this.setState({ ...this.state, dropdownMenu: false }, () => {
+        document.removeEventListener("click",this.closeMenu)
+      })
+    }
+   
+  }
 
 
   handleScroll = () => {
@@ -71,12 +92,13 @@ export class Navbar extends Component {
                
                 <HashLink className="azonix-font" smooth to="/#join-section"  > Nous rejoindre </HashLink>
               </li>
-            <li className="nav-item"> <a className="azonix-font" href=""> Discord</a></li>
-              <li className="nav-item dropdown" ><a className="azonix-font" href="/vote"  >Vote</a>
-                <div className={classNames("dropdown-menu",this.state.dropdownMenu?"show":null)} >
-                  <a href="">Top Server</a>
+            <li className="nav-item"> <a className="azonix-font" href="#"> Discord</a></li>
+              <li className="nav-item dropdown" >
+                <a className="dropdown-toogle azonix-font" href="/vote" onClick={this.showMenu}  >Vote</a>
+                <div ref={this.dropdownRef} className={classNames("dropdown-menu",this.state.dropdownMenu?"show":null)} >
+                  <a href="https://top-serveurs.net/gta/vote/lspr" target="_blank" >Top Server</a>
                   <div className="dropdown-divider"></div>
-                  <a href="">Serveur privée</a>
+                  <a href="https://serveur-prive.net/grand-theft-auto/ls-paradise-5932" target="_blank" >Serveur privée</a>
                 </div>
               </li>
           </ul>
