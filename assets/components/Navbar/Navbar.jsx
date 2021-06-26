@@ -15,21 +15,21 @@ export class Navbar extends Component {
    super()
    this.state = {
     navbarScroll: false,
-    dropdownMenu:false
+     dropdownMenu: false,
+    toogleMenu:false
    };
    
    this.dropdownRef = React.createRef();
 
    this.showMenu = this.showMenu.bind(this);
    this.closeMenu = this.closeMenu.bind(this);
+   this.navToogleMenu = this.navToogleMenu.bind(this)
  }
  
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
   
-
-
   }
 
   componentWillUnmount() {
@@ -55,6 +55,9 @@ export class Navbar extends Component {
    
   }
 
+  navToogleMenu() {
+    this.setState({...this.state,toogleMenu:!this.state.toogleMenu})
+  }
 
   handleScroll = () => {
     if (window.scrollY > 20) {
@@ -82,8 +85,8 @@ export class Navbar extends Component {
       >
         
         <div className="container">
-        <span className="navbar-toggler-icon"> </span>
-          <div className="navCont">
+        <span className="navbar-toggler-icon" onClick={this.navToogleMenu} > </span>
+          <div className={classNames("navCont",this.state.toogleMenu?"show":null)}>
           <ul className="navbar-nav-left">
               <li className="nav-item">
                 <HashLink className="azonix-font" smooth to="/#top"  >Accueil </HashLink>
