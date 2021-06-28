@@ -45,3 +45,13 @@
     position: relative;
     font-weight: 400;
 }
+
+@media(max-width:760px) {
+
+
+
+
+    .text-btn {
+        font-size: 0.8rem;
+    }
+}

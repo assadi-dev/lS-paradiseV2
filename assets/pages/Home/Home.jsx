@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import "./home.css";
 import Intro from "../Intro/Intro";
 import MainSection from "../Section/MainSection";
+import Footer from "../../components/Footer";
 
 export class Home extends Component {
   render() {
@@ -10,6 +11,7 @@ export class Home extends Component {
       <div id="wrapper">
         <Intro />
         <MainSection />
+        <Footer />
       </div>
     );
   }

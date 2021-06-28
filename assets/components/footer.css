@@ -1,0 +1,45 @@
+#page-footer {
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#copryright-section {
+    overflow: hidden;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 300;
+
+}
+
+#copryright-section a {
+    color: #fff;
+}
+
+#copryright-section a:hover {
+    color: #fff;
+}
+
+#logo-footer-section {
+    overflow: hidden;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+#logoFooter {
+    width: 120px;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.footer-dark {
+    background-color: #1C2331;
+}

@@ -56,10 +56,26 @@
     color: rgba(22, 28, 39, 1) !important;
 }
 
+@media (max-width:1145px) {
+    .possibility-card {
+        font-size: 0.8rem;
+    }
+
+    .title-posibility {
+        font-size: 1rem;
+    }
+}
+
 @media (max-width:992px) {
     .possibility-card {
-        flex: 0 0 40%;
-        max-width: 40%;
+        flex: 0 0 45%;
+        max-width: 45%;
+        font-size: 0.8rem;
+
+    }
+
+    .title-posibility {
+        font-size: 1rem;
     }
 }
 
@@ -68,5 +84,6 @@
         flex: 0 0 80%;
         max-width: 80%;
         text-align: center;
+        height: auto;
     }
 }
