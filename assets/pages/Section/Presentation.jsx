@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./presentation.css";
-
+import img from "../../images/picture1.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
@@ -11,7 +11,7 @@ class Presentation extends Component {
         <div className="container">
           <div id="rowPresentation">
             <div id="cardNews">
-              <img id="imgPresentation" alt="picture_1" />
+              <img id="imgPresentation" src={img} alt="picture_1" />
             </div>
             <div id="textPresentation">
               <h2 id="titlePresentation">Nouvauté</h2>
