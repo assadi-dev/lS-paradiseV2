@@ -11,7 +11,7 @@ class Presentation extends Component {
         <div className="container">
           <div id="rowPresentation">
             <div id="cardNews">
-              <img id="imgPresentation" src={img} alt="picture_1" />
+              <img id="imgPresentation" alt="picture_1" />
             </div>
             <div id="textPresentation">
               <h2 id="titlePresentation">Nouvauté</h2>
