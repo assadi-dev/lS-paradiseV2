@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./presentation.css";
-import img from "../../images/picture1.png";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
