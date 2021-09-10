@@ -1,13 +1,23 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import "./presentation.css";
 import img from "../../images/picture1.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import WOW from "wowjs";
 
 class Presentation extends Component {
+  componentDidMount() {
+    const wow = new WOW.WOW();
+    wow.init();
+  }
+
   render() {
     return (
-      <section id="presentation-section">
+      <section
+        id="presentation-section"
+        className="wow animate__fadeIn"
+        data-wow-duration="1s"
+      >
         <div className="container">
           <div id="rowPresentation">
             <div id="cardNews">
