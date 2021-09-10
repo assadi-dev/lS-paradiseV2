@@ -2,8 +2,13 @@ import React, { Component } from "react";
 import "./joinSection.css";
 import picture from "../../images/perso4.png";
 import JoinCard from "../../components/JoinCard";
-
+import WOW from "wowjs";
 class JoinSection extends Component {
+  componentDidMount() {
+    const wow = new WOW.WOW();
+    wow.init();
+  }
+
   render() {
     return (
       <section id="join-section">
@@ -25,7 +30,10 @@ class JoinSection extends Component {
                 text_button="Cliquer pour acceder"
               />
             </div>
-            <div className="col-join col-join-picture">
+            <div
+              className="col-join col-join-picture wow animate__fadeIn"
+              data-wow-duration="1s"
+            >
               <img className="img-fluid" src={picture} alt="perso-4" />
             </div>
             <div className="col-join">

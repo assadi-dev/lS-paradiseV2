@@ -29,12 +29,14 @@
     padding-right: 1.5rem;
     flex: 0 0 50%;
     max-width: 50%;
+
 }
 
 .row-staff-description {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+
 
 }
 

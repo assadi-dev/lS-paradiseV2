@@ -21,7 +21,7 @@ export class StaffSection extends Component {
       <section
         id="staff-section"
         className="wow animate__fadeIn"
-        data-wow-duration="0.5s"
+        data-wow-duration="1s"
       >
         <div className="container">
           <h2 id="titleStaff">STAFF</h2>
@@ -45,7 +45,7 @@ export class StaffSection extends Component {
                 <StaffCard
                   colorIcon="blue-text"
                   animation="animate__fadeInLeft"
-                  duration="2.5s"
+                  duration="3s"
                   delay="1s"
                   icon={<FontAwesomeIcon icon={faServer} size="2x" />}
                   title="64 slots"
@@ -54,7 +54,7 @@ export class StaffSection extends Component {
                 <StaffCard
                   colorIcon="cyan-text"
                   animation="animate__fadeInLeft"
-                  duration="2.5s"
+                  duration="3.5s"
                   delay="1.5s"
                   icon={<FontAwesomeIcon icon={faHandshake} size="2x" />}
                   title="Roleplay & Fair-play"
@@ -62,7 +62,11 @@ export class StaffSection extends Component {
                 />
               </div>
             </div>
-            <div id="staff-picture">
+            <div
+              id="staff-picture"
+              className="wow animate__fadeIn"
+              data-wow-duration="1s"
+            >
               <img className="img-fluid" src={picture} alt="perso-2" />
             </div>
           </div>
