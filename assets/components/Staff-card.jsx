@@ -14,7 +14,6 @@ class StaffCard extends Component {
     return (
       <div
         className={`row-staff-card wow ${animation}`}
-        data-wow-delay={delay}
         data-wow-duration={duration}
       >
         <div className="col-icone-staff-card">
