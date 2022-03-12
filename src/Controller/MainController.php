@@ -9,11 +9,12 @@ use Symfony\Component\HttpFoundation\Response;
 class MainController extends AbstractController
 {
     /**
-     * @Route("/", name="home")
+     * @Route("/{reactRouting}", name="index", priority="-1", defaults={"reactRouting": null}, requirements={"reactRouting"=".+"})
      */
 
     public function index(): Response
     {
+       
         return $this->render('home/index.html.twig');
     }
 }

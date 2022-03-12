@@ -7,12 +7,14 @@ import StaffSection from "./StaffSection";
 class MainSection extends Component {
   render() {
     return (
-      <main id="main-section">
-        <Presentation />
-        <StaffSection />
-        <JoinSection />
-        <PossiblitySection />
-      </main>
+      <AuthProvider {...oidcConfig}>
+        <main id="main-section">
+          <Presentation />
+          <StaffSection />
+          <JoinSection />
+          <PossiblitySection />
+        </main>
+      </AuthProvider>
     );
   }
 }
